@@ -33,16 +33,16 @@ contract token_Genome {
     mapping(address => uint) public bal;
 
    
-    function mint(address addr, uint data) public {
-        total_supply += data;
-        bal[addr] += data;
+    function mint(address addr, uint val) public {
+        total_supply += val;
+        bal[addr] += val;
     }
 
-    function burn(address addr, uint data) public {
-        if(bal[addr] >=data)
+    function burn(address adrs, uint val) public {
+        if(bal[adrs] >=data)
         {
-            total_supply -= data;
-            bal[addr] -= data;
+            total_supply -= val;
+            bal[adrs] -= val;
         } 
     }
 }
